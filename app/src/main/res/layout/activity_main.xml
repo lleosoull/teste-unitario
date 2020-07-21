@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.MainActivity">
+
+        <ImageView
+            android:id="@+id/ivAuctionPictures"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:contentDescription="@string/auction_image"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_camera_off" />
+
+        <TextView
+            android:id="@+id/tvAuctionDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginTop="8dp"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivAuctionPictures"
+            tools:text="Descrição detalhada do produto leiloado" />
+
+        <TextView
+            android:id="@+id/tvHighestAuctionBidTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/highest_bidder"
+            app:layout_constraintEnd_toEndOf="@+id/tvAuctionDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAuctionDescription" />
+
+        <TextView
+            android:id="@+id/tvHighestAuctionBidValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/tvHighestAuctionBidTitle"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvHighestAuctionBidTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvHighestAuctionBidTitle"
+            tools:text="R$ 1000,00" />
+
+        <TextView
+            android:id="@+id/tvLowestAuctionBidTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/lowest_bid"
+            app:layout_constraintEnd_toEndOf="@+id/tvHighestAuctionBidValue"
+            app:layout_constraintStart_toStartOf="@id/tvHighestAuctionBidTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvHighestAuctionBidValue" />
+
+        <TextView
+            android:id="@+id/tvLowestAuctionBidValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@id/tvLowestAuctionBidTitle"
+            app:layout_constraintStart_toStartOf="@id/tvLowestAuctionBidTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvLowestAuctionBidTitle"
+            tools:text="R$ 200,00" />
+
+        <TextView
+            android:id="@+id/tvMegaBidAuctionTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:text="@string/highest_bid"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLowestAuctionBidValue" />
+
+        <TextView
+            android:id="@+id/tvMegaBidAuction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/tvMegaBidAuctionTitle"
+            app:layout_constraintStart_toStartOf="@id/tvMegaBidAuctionTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvMegaBidAuctionTitle"
+            tools:text="R$ 1000,00" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

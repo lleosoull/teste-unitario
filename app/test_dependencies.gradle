@@ -1,0 +1,26 @@
+ext {
+
+    def coroutines_version = "1.3.3"
+    def espresso_version = '3.2.0'
+    def test_runner_version = '1.2.0'
+    def core_ktx_test_version = "1.2.0"
+    def core_testing_version = '2.1.0'
+    def junit_version = '4.13'
+    def mockito_version = '2.27.0'
+    def mockito_kotlin_version = '2.1.0'
+    componetTestImplementation = [
+            runner       : "androidx.test:runner:$test_runner_version",
+            espressocore : "androidx.test.espresso:espresso-core:$espresso_version",
+            corektx      : "androidx.test:core-ktx:$core_ktx_test_version",
+            junit        : "junit:junit:$junit_version",
+            mockitocore  : "org.mockito:mockito-core:$mockito_version",
+            mockitokotlin: "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockito_kotlin_version",
+            coretesting  : "androidx.arch.core:core-testing:$core_testing_version",
+            jetbrains    : "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
+    ]
+
+    jetbrainsDepedencies = [
+            core   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version",
+            android: "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+    ]
+}

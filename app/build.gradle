@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+apply from: 'android_dependencies.gradle'
+apply from: 'test_dependencies.gradle'
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        applicationId "com.project.test"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        //utilizando o VextorDrawables para sempre ajustar os icones dependendo da tela
+        vectorDrawables.useSupportLibrary = true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    implementation componetAndroid.values()
+    implementation kotlinDependencies.values()
+    implementation layoutDependencies.values()
+    implementation koinDependencies.values()
+    implementation lifecycleDependencies.values()
+    implementation imageDependencies.values()
+    implementation apiDependencies.values()
+
+    implementation componetTestImplementation.values()
+    implementation jetbrainsDepedencies.values()
+
+}

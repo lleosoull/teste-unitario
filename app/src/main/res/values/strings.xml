@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">teste-unitario</string>
+
+    <!-- activity  -->
+    <string name="highest_bidder">Maior lance:</string>
+    <string name="lowest_bid">Menor lance:</string>
+    <string name="highest_bid">Maiores lances</string>
+    <string name="auction_image">Imagem do leilão</string>
+
+</resources>
