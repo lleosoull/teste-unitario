@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_margin="8dp">
+
+    <ImageView
+        android:id="@+id/ivAuctionPictures"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:contentDescription="@string/auction_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_camera_off" />
+
+    <TextView
+        android:id="@+id/tvAuctionMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/tvAuctionPrice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivAuctionPictures"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Playstatio 5" />
+
+    <TextView
+        android:id="@+id/tvAuctionPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvAuctionMessage"
+        app:layout_constraintStart_toStartOf="@+id/tvAuctionMessage"
+        app:layout_constraintTop_toBottomOf="@+id/tvAuctionMessage"
+        tools:text="R$ 6.000,00" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
