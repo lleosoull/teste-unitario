@@ -18,6 +18,6 @@ class AuctionAdapter(
     override fun getItemCount(): Int = auctionList.size
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        (holder as AuctionHolder).build()
+        (holder as AuctionHolder).build(auctionList[position], context)
     }
 }

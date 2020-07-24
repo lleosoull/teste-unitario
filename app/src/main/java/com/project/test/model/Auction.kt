@@ -2,8 +2,10 @@ package com.project.test.model
 
 class Auction {
 
-    var id: Int = 0
-    var title: String = ""
     var message: String = ""
-    
+    var listBid: List<Bid> = emptyList()
+
+    var biggerBid = Double.NEGATIVE_INFINITY
+    var smallerBid = Double.POSITIVE_INFINITY
+
 }
